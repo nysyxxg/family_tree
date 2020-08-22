@@ -49,7 +49,8 @@
         </if>
     </select>
     <select id="getFamilyTree"  resultMap="BaseResultMap">
-        select b.name as branchName,a.* from bs_people a left join basic_dict b on a.people_branch=b.id where b.code=#{branch} limit 1
+        select b.name as branchName,a.* from bs_people a
+        left join basic_dict b on a.people_branch=b.id where b.code=#{branch} limit 1
     </select>
 
     <select id="getPeopleByName" resultMap="BaseResultMap">
